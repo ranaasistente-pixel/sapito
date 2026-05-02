@@ -3453,5 +3453,50 @@ body.discord-activity .habitat-puzzle-preview {
     max-width: 560px !important;
   }
 }
+/* Discord-friendly shop catalog */
+body.discord-activity .shop-box {
+  align-items: start !important;
+  padding: 8px !important;
+  overflow: hidden !important;
+}
+
+body.discord-activity .shop-sheet {
+  width: min(760px, 94vw) !important;
+  max-height: 68vh !important;
+  overflow-y: auto !important;
+  padding: 12px !important;
+  padding-bottom: 72px !important;
+  border-radius: 18px !important;
+}
+
+body.discord-activity .shop-sheet h1,
+body.discord-activity .shop-sheet h2 {
+  font-size: clamp(26px, 4vw, 42px) !important;
+}
+
+body.discord-activity .shop-card,
+body.discord-activity .catalog-item,
+body.discord-activity .sapito-style-item {
+  padding: 8px !important;
+}
+
+body.discord-activity .shop-catalog-grid,
+body.discord-activity .visual-catalog,
+body.discord-activity .sapito-style-catalog {
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+}
+
+body.discord-activity .shop-card h4,
+body.discord-activity .catalog-item h4 {
+  font-size: clamp(17px, 2.5vw, 22px) !important;
+}
+
+body.discord-activity .btn {
+  min-height: 42px !important;
+}
+
+
+
 
 
