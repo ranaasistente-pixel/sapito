@@ -364,7 +364,7 @@ body.neglect-stage-3 .home-scene::after {
 
 .pond-decor {
   position: absolute;
-  pointer-events: none;
+  pointer-events: auto;
   user-select: none;
   transform-origin: center center;
   opacity: 0.96;
@@ -3384,3 +3384,74 @@ body.discord-activity .home-controls .btn {
   max-height: 80vh;
   overflow: auto;
 }
+
+/* DISCORD RESPONSIVE MODE */
+body.discord-activity .app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.discord-activity .home-controls {
+  width: calc(100vw - 16px) !important;
+  max-width: 520px !important;
+  left: 50% !important;
+  bottom: clamp(6px, 1.2vh, 12px) !important;
+  transform: translateX(-50%) !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: clamp(4px, 1vw, 8px) !important;
+}
+
+body.discord-activity .home-controls .btn {
+  width: 100% !important;
+  height: clamp(46px, 9vh, 76px) !important;
+  font-size: clamp(10px, 1.8vw, 15px) !important;
+  padding: 0 4px 8px !important;
+}
+
+/* popups/windows */
+body.discord-activity .panel,
+body.discord-activity .settings-sheet,
+body.discord-activity .shop-sheet {
+  width: min(94vw, 820px) !important;
+  max-height: 78vh !important;
+  overflow: auto !important;
+  padding: clamp(10px, 2vw, 18px) !important;
+}
+
+/* habitat / puzzle preview */
+body.discord-activity .habitat-view-preview,
+body.discord-activity .habitat-puzzle-preview {
+  aspect-ratio: 16 / 9 !important;
+  min-height: clamp(100px, 22vh, 180px) !important;
+  max-height: 38vh !important;
+}
+
+/* phone portrait */
+@media (max-width: 600px) {
+  body.discord-activity .home-controls {
+    max-width: 96vw !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  }
+
+  body.discord-activity .home-controls .btn {
+    height: clamp(44px, 12vw, 62px) !important;
+    font-size: 10px !important;
+  }
+
+  body.discord-activity .panel,
+  body.discord-activity .settings-sheet,
+  body.discord-activity .shop-sheet {
+    width: 94vw !important;
+    max-height: 72vh !important;
+  }
+}
+
+/* tablets / desktop */
+@media (min-width: 900px) {
+  body.discord-activity .home-controls {
+    max-width: 560px !important;
+  }
+}
+
+
