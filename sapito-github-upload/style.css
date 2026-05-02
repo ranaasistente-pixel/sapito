@@ -3333,89 +3333,15 @@ body.discord-activity .habitat-puzzle-preview {
   max-height: 34vh !important;
   min-height: 100px !important;
 }
-/* FINAL HOME BUTTON SIZE FIX */
-.home-controls {
-  grid-template-columns: repeat(5, min(17vw, 86px)) !important;
-  gap: 6px !important;
-}
-
-.home-controls .btn {
-  width: min(17vw, 86px) !important;
-  height: min(17vw, 78px) !important;
-  font-size: clamp(11px, 2vw, 15px) !important;
-  padding: 0 5px 8px !important;
-}
-
-body.discord-activity .home-controls {
-  grid-template-columns: repeat(5, min(15vw, 72px)) !important;
-}
-
-body.discord-activity .home-controls .btn {
-  width: min(15vw, 72px) !important;
-  height: min(15vw, 68px) !important;
-  font-size: clamp(10px, 1.7vw, 13px) !important;
-}
-/* RESPONSIVE HOME BUTTON FIX */
-.home-controls {
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  width: 100%;
-  max-width: 480px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.home-controls .btn {
-  width: 100% !important;
-  height: clamp(60px, 16vw, 78px) !important;
-  font-size: clamp(11px, 2vw, 14px) !important;
-}
-/* FIX: keep home buttons inside Discord/game screen */
-.home-controls,
-body.discord-activity .home-controls {
-  left: 8px !important;
-  right: auto !important;
-  transform: none !important;
-  bottom: 8px !important;
-
-  width: min(92vw, 420px) !important;
-  max-width: calc(100% - 16px) !important;
-
-  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-  gap: 6px !important;
-}
-
-.home-controls .btn,
-body.discord-activity .home-controls .btn {
-  width: 100% !important;
-  height: clamp(54px, 11vw, 72px) !important;
-  font-size: clamp(10px, 1.7vw, 14px) !important;
-}
-.habitat-view-piece {
-  pointer-events: auto !important;
-  cursor: grab;
-  touch-action: none;
-}
-
-.habitat-view-piece.dragging {
-  cursor: grabbing;
-  z-index: 99 !important;
-  opacity: 0.9;
-}
-
-.habitat-view-piece.placed {
-  outline: 2px solid rgba(55, 180, 90, 0.75);
-}
-/* FINAL FIX: home buttons stay visible in Discord + desktop */
+/* CLEAN FINAL FIX: responsive home controls */
 .home-controls,
 body.discord-activity .home-controls {
   left: 50% !important;
   right: auto !important;
   transform: translateX(-50%) !important;
   bottom: 8px !important;
-
   width: calc(100vw - 16px) !important;
   max-width: 520px !important;
-
   display: grid !important;
   grid-template-areas: "coin food play shop settings" !important;
   grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
@@ -3430,4 +3356,20 @@ body.discord-activity .home-controls .btn {
   min-height: 0 !important;
   font-size: clamp(10px, 1.6vw, 15px) !important;
   padding: 0 4px 8px !important;
+}
+
+.habitat-view-piece {
+  pointer-events: auto !important;
+  cursor: grab;
+  touch-action: none;
+}
+
+.habitat-view-piece.dragging {
+  cursor: grabbing;
+  z-index: 99 !important;
+  opacity: 0.9;
+}
+
+.habitat-view-piece.placed {
+  outline: 2px solid rgba(55, 180, 90, 0.75);
 }
