@@ -376,10 +376,16 @@ body.neglect-stage-3 .home-scene::after {
 
 .pond-piece {
   position: absolute;
-  pointer-events: none;
+  pointer-events: auto;
   user-select: none;
   image-rendering: auto;
   overflow: visible;
+  cursor: grab;
+  touch-action: none;
+}
+.pond-piece.dragging {
+  cursor: grabbing;
+  z-index: 99 !important;
 }
 
 .pond-decor.leaf-pad {
