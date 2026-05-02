@@ -6221,3 +6221,28 @@
 
   boot();
 })();
+document.querySelectorAll(".pond-piece").forEach(piece => {
+  let isDragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  piece.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    piece.classList.add("dragging");
+
+    offsetX = e.clientX - piece.offsetLeft;
+    offsetY = e.clientY - piece.offsetTop;
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+
+    piece.style.left = (e.clientX - offsetX) + "px";
+    piece.style.top = (e.clientY - offsetY) + "px";
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    piece.classList.remove("dragging");
+  });
+});
