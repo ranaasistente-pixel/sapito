@@ -1,0 +1,18 @@
+{
+  "name": "sapito",
+  "version": "1.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test:ledger": "node --test server/coin-ledger.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1"
+  }
+}
